@@ -1,31 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #edf2f7;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .filters {
   background: white;
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
+
 .filters li {
-  display: inline-block;
-  max-width: 80px;
-  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  padding: 4px;
 }
+
 .filters li label {
   display: block;
+  margin-bottom: 6px;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 600;
+  color: #333;
 }
-.filters li input {
-  width: 100%;
-}
+
+.filters li input,
 .filters li select {
   width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9fafb;
+  font-size: 14px;
+  color: #333;
 }
+
+.filters li input:hover,
+.filters li select:hover {
+  border-color: #999;
+  background: #f5f7fb;
+}
+
+.filters li input:focus,
+.filters li select:focus {
+  outline: none;
+  border-color: #6c8bf5;
+  background: #fff;
+}
+
 .widget {
   position: relative;
   width: 300px;
   height: 350px;
-  margin: 50px auto;
+  margin: 10px auto 40px;
   background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
 }
 .widget .cover {
   height: 160px;
